@@ -1,0 +1,310 @@
+/* Fonts Google */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+  --color-utama: #3471e7;
+  --second-color: #ffb800;
+  --text-light: white;
+  --text-dark: black;
+  --bg-footer: #243659;
+  --bg-dark: #434343;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--color-utama);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+nav {
+  height: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.nav-brand {
+  width: 35%;
+  color: var(--text-light);
+}
+
+.nav-item {
+  display: flex;
+  list-style: none;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+}
+
+.nav-item ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item ul li {
+  display: block;
+}
+
+.nav-item ul a {
+  display: block;
+  text-decoration: none;
+  color: var(--text-light);
+  padding: 8px 10px;
+  margin: 0 10px;
+  font-size: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+.nav-item ul a:hover {
+  background-color: #243659;
+  border-radius: 3px;
+}
+
+.btn {
+  border: none;
+  border-radius: 4px;
+  padding: 7px 10px;
+  background-color: var(--second-color);
+  font-size: 18px;
+  font-weight: bold;
+  box-shadow: 4px 4px 4px rgba(15, 15, 15, 0.3);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #3f2d00;
+  color: var(--text-light);
+}
+
+.btn:active {
+  box-shadow: none;
+  transform: translate(2px, 2px);
+}
+
+/* Section Home */
+#home {
+  padding-top: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#home .home-left h1 {
+  font-size: 50px;
+  font-weight: 900;
+  color: var(--color-utama);
+  filter: drop-shadow(4px 4px 4px rgba(132, 132, 132, 0.5));
+}
+
+#home .home-left p {
+  color: var(--color-utama);
+  font-style: italic;
+  font-size: 18px;
+  filter: drop-shadow(4px 4px 4px rgba(132, 132, 132, 0.7));
+}
+
+#home .home-left .buy-now {
+  margin-top: 22px;
+}
+
+#home .home-right .div-image {
+  width: 350px;
+  height: 431px;
+  background-image: url(../img/gambar1.webp);
+  background-size: cover;
+  border: 2px solid var(--color-utama);
+  border-radius: 4px;
+  position: relative;
+}
+
+#home .home-right .div-image span {
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: var(--color-utama);
+  position: absolute;
+}
+
+#home .home-right .div-image span:nth-child(1) {
+  top: 10px;
+  left: 10px;
+}
+
+#home .home-right .div-image span:nth-child(2) {
+  top: 10px;
+  right: 10px;
+}
+
+#home .home-right .div-image span:nth-child(3) {
+  bottom: 10px;
+  right: 10px;
+}
+
+#home .home-right .div-image span:nth-child(4) {
+  bottom: 10px;
+  left: 10px;
+}
+
+/* Section About */
+#about {
+  padding: 130px 0 130px 0;
+}
+
+#about h1 {
+  font-size: 22px;
+  width: 94px;
+  height: 35px;
+  color: var(--text-light);
+  background-color: var(--color-utama);
+  text-align: center;
+  line-height: 35px;
+  margin: 25px auto;
+}
+
+#about p span {
+  font-size: 18px;
+  font-weight: 800;
+  color: var(--color-utama);
+  font-style: normal;
+}
+
+#about p {
+  font-style: italic;
+  font-weight: 500;
+  margin-bottom: 18px;
+}
+
+#about .kelebihan-kami h3 {
+  font-size: 18px;
+  color: var(--color-utama);
+  margin-bottom: 20px;
+}
+
+#about .kelebihan-kami .one,
+#about .kelebihan-kami .two,
+#about .kelebihan-kami .three {
+  display: flex;
+}
+
+#about .kelebihan-kami .icon {
+  width: 45px;
+  height: 45px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+  border-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 20px;
+}
+
+#about .kelebihan-kami .text-icon h4 {
+  font-size: 15px;
+  font-weight: 700;
+}
+
+#about .kelebihan-kami .text-icon p {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+/* Section Review */
+#review {
+  padding: 120px 0;
+}
+
+#review h1 {
+  font-size: 22px;
+  width: 104px;
+  height: 35px;
+  color: var(--text-light);
+  background-color: var(--color-utama);
+  text-align: center;
+  line-height: 35px;
+  margin: 25px auto;
+}
+
+#review > p {
+  font-size: 15px;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#review .kotak-review {
+  display: flex;
+  margin-bottom: 80px;
+}
+
+#review .kotak-review > div {
+  width: 333px;
+  border-radius: 5px;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.204);
+  box-sizing: border-box;
+  padding: 20px;
+  border: 2px solid var(--color-utama);
+  margin: 10px;
+}
+
+#review .profile-client {
+  display: flex;
+  width: 100%;
+  margin-bottom: 20px;
+  align-items: center;
+}
+
+#review .profile-client .img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.248);
+  margin-right: 20px;
+  overflow: hidden;
+}
+
+#review .profile-client .profile h4 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+#review .reviewnya p {
+  font-size: 12px;
+  font-weight: 600;
+}
+
+#review .profile-client .profile p {
+  font-size: 10px;
+  font-weight: 600;
+  color: #c3c3c3;
+}
+
+/* Section Portfolio */
+#portfolio h1 {
+  font-size: 22px;
+  width: 132px;
+  height: 35px;
+  color: var(--text-light);
+  background-color: var(--color-utama);
+  text-align: center;
+  line-height: 35px;
+  margin: 25px auto;
+}
