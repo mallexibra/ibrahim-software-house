@@ -298,6 +298,9 @@ nav {
 }
 
 /* Section Portfolio */
+#portfolio {
+  padding-top: 120px;
+}
 #portfolio h1 {
   font-size: 22px;
   width: 132px;
@@ -307,4 +310,40 @@ nav {
   text-align: center;
   line-height: 35px;
   margin: 25px auto;
+}
+
+#portfolio .portfolio {
+  width: 476px;
+  display: inline-block;
+  margin: 30px;
+  position: relative;
+  box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
+}
+
+#portfolio .portfolio a {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  color: white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #0c142495;
+  transition: all 0.3s ease-in-out;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#portfolio .portfolio:hover a {
+  display: flex;
+}
+
+/* Section Footer */
+footer {
+  width: 100%;
+  height: 370px;
 }
