@@ -26,11 +26,37 @@ body {
 }
 
 header {
-  background-color: var(--color-utama);
   position: fixed;
   top: 0;
   width: 100%;
   z-index: 1;
+}
+
+body header.bro {
+  background-color: var(--color-utama);
+  color: white;
+}
+
+.darkMode {
+  width: 25px;
+  height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  border-radius: 5px;
+  background-color: #ffb800;
+  text-decoration: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+}
+
+.darkMode svg {
+  display: block;
+  font-size: 2.5rem;
+  color: white;
+  transition: all 0.3s ease-in-out;
 }
 
 nav {
@@ -41,7 +67,7 @@ nav {
 
 .nav-brand {
   width: 35%;
-  color: var(--text-light);
+  /* color: var(--color-utama); */
 }
 
 .nav-item {
@@ -63,10 +89,10 @@ nav {
   display: block;
 }
 
-.nav-item ul a {
+.nav-item a {
   display: block;
   text-decoration: none;
-  color: var(--text-light);
+  color: var(--text-dark);
   padding: 8px 10px;
   margin: 0 10px;
   font-size: 15px;
@@ -346,4 +372,117 @@ nav {
 footer {
   width: 100%;
   height: 370px;
+}
+
+footer .top {
+  width: 100%;
+  background-color: var(--color-utama);
+}
+
+footer .top .wrapper-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+footer .top .wrapper-top .intro {
+  box-sizing: border-box;
+  color: var(--text-light);
+  width: 50%;
+  padding-right: 70px;
+}
+
+footer .top .wrapper-top .intro h1 {
+  font-size: 25px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+footer .top .wrapper-top .intro p {
+  font-style: italic;
+  font-size: 15px;
+}
+
+footer .top .wrapper-top .right {
+  display: flex;
+  justify-content: end;
+  width: 70%;
+}
+
+footer .top .wrapper-top form {
+  display: flex;
+  flex-direction: column;
+}
+
+footer .top .wrapper-top form label {
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  font-style: italic;
+}
+
+footer .top .wrapper-top form label span {
+  color: red;
+}
+
+footer .top .wrapper-top form input,
+footer .top .wrapper-top form textarea {
+  margin-bottom: 10px;
+  border: none;
+  outline: 2px solid var(--second-color);
+  padding: 5px;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+footer .top .wrapper-top form button {
+  padding: 10px 0;
+  border-radius: 5px;
+  border: none;
+  background-color: var(--second-color);
+  font-size: 15px;
+  font-weight: 800;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+footer .top .wrapper-top form button:hover {
+  box-shadow: none;
+}
+
+footer .top .wrapper-top .list-item {
+  display: flex;
+  margin-left: 20px;
+  padding-top: 20px;
+}
+
+footer .top .wrapper-top .list-item ul {
+  list-style: none;
+  margin-right: 15px;
+}
+
+footer .top .wrapper-top .list-item ul li {
+  margin-bottom: 10px;
+}
+
+footer .top .wrapper-top .list-item ul li a {
+  text-decoration: none;
+  color: white;
+  font-style: italic;
+  font-size: 15px;
+}
+
+footer .top .wrapper-top .list-item ul li a:hover {
+  font-weight: 600;
+}
+
+footer .bottom {
+  display: flex;
+  justify-content: center;
+  background-color: var(--bg-footer);
+  align-items: center;
+  padding: 10px 0;
+  color: var(--text-light);
+  font-weight: 600;
 }
