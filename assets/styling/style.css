@@ -167,6 +167,7 @@ nav {
   flex-direction: column;
   align-items: center;
   padding: 90px 0;
+  transform: translateX(999px);
   transition: all 0.7s ease-in-out;
 }
 

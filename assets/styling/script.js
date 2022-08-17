@@ -28,7 +28,7 @@ function darkMode() {
   $("body").css("background-color", "#434343");
   $(".nav-brand h1").css("color", "white");
   $(".darkMode").html('<span class="iconify" data-icon="akar-icons:sun-fill"></span>');
-
+  $(".nav-item ul li a").css("color", "white");
   $("h4").css("color", "white");
   $("p").css("color", "white");
   $("div.icon").css("background-color", "white");
