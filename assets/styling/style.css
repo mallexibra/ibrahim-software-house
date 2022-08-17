@@ -63,6 +63,7 @@ nav {
   height: 80px;
   display: flex;
   align-items: center;
+  position: relative;
 }
 
 .nav-brand {
@@ -124,6 +125,91 @@ nav {
 .btn:active {
   box-shadow: none;
   transform: translate(2px, 2px);
+}
+
+.burger-menu {
+  width: 30px;
+  display: none;
+  align-items: flex-end;
+  flex-direction: column;
+  cursor: pointer;
+  position: absolute;
+  right: 0;
+}
+
+.burger-menu span {
+  display: block;
+  background-color: white;
+  border-radius: 10px;
+  height: 3px;
+  margin: 3px 0;
+}
+
+.burger-menu span:nth-child(1) {
+  width: 100%;
+}
+
+.burger-menu span:nth-child(2) {
+  width: 70%;
+}
+.burger-menu span:nth-child(3) {
+  width: 50%;
+}
+
+.nav-item-mobile {
+  position: fixed;
+  right: 0;
+  width: 70%;
+  height: 100vh;
+  z-index: 1;
+  background-color: #243659;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 90px 0;
+  transition: all 0.7s ease-in-out;
+}
+
+.nav-item-mobile span {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+  font-size: 1.3em;
+  right: 30px;
+  top: 30px;
+  width: 35px;
+  height: 35px;
+  color: white;
+  border-radius: 50%;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.nav-item-mobile span:hover {
+  background-color: #3471e7;
+}
+
+.nav-item-mobile ul {
+  list-style: none;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.nav-item-mobile ul li a {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  padding: 10px 0;
+  width: 100%;
+  transition: all 0.5s ease-in-out;
+}
+
+.nav-item-mobile ul li a:hover {
+  background-color: #3471e7;
 }
 
 /* Section Home */
@@ -278,6 +364,7 @@ nav {
 
 #review .kotak-review {
   display: flex;
+  flex-wrap: wrap;
   margin-bottom: 80px;
 }
 
@@ -485,4 +572,74 @@ footer .bottom {
   padding: 10px 0;
   color: var(--text-light);
   font-weight: 600;
+}
+
+/* Responsive */
+@media screen and (max-width: 960px) {
+  nav {
+    justify-content: center;
+    align-items: center;
+  }
+
+  .nav-item {
+    display: none;
+  }
+
+  .burger-menu {
+    display: flex;
+  }
+
+  #home .home-left {
+    text-align: center;
+  }
+
+  #home .home-left h1 {
+    font-size: 37px;
+    margin: 20px 0;
+  }
+
+  .nav-brand {
+    width: 100%;
+    text-align: center;
+  }
+
+  #home .home-left p {
+    text-align: justify;
+  }
+
+  #home .home-right {
+    display: none;
+  }
+
+  #review .kotak-review {
+    justify-content: center;
+  }
+
+  #portfolio .katalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  footer .wrapper-top {
+    flex-direction: column;
+  }
+
+  footer .top .wrapper-top .intro {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 30px;
+    padding: 0;
+    /* outline: 1px solid red; */
+  }
+
+  footer .top .wrapper-top .right {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
 }

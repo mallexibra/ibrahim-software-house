@@ -4,9 +4,11 @@ function untukTagLink() {
   if (localStorage.getItem("tema") == "dark") {
     $(".nav-brand h1").css("color", "white");
     $(".nav-item ul li a").css("color", "white");
+    $(".burger-menu span").css("background-color", "white");
   } else {
     $(".nav-brand h1").css("color", "black");
     $(".nav-item ul li a").css("color", "black");
+    $(".burger-menu span").css("background-color", "black");
   }
 }
 
@@ -15,6 +17,7 @@ window.addEventListener("scroll", () => {
     $("header").addClass("bro");
     $(".nav-brand h1").css("color", "white");
     $(".nav-item ul li a").css("color", "white");
+    $(".burger-menu span").css("background-color", "white");
   } else {
     $("header").removeClass("bro");
     untukTagLink();
@@ -22,11 +25,14 @@ window.addEventListener("scroll", () => {
 });
 
 function darkMode() {
-  $(".darkMode").html('<span class="iconify" data-icon="akar-icons:sun-fill"></span>');
   $("body").css("background-color", "#434343");
+  $(".nav-brand h1").css("color", "white");
+  $(".darkMode").html('<span class="iconify" data-icon="akar-icons:sun-fill"></span>');
+
   $("h4").css("color", "white");
   $("p").css("color", "white");
   $("div.icon").css("background-color", "white");
+  $(".burger-menu span").css("background-color", "white");
 }
 
 function lightMode() {
@@ -39,6 +45,7 @@ function lightMode() {
   $("div.icon").css("background-color", "white");
   $(".nav-brand h1").css("color", "black");
   $(".nav-item ul li a").css("color", "black");
+  $(".burger-menu span").css("background-color", "black");
 }
 
 function toggleTheme() {
@@ -72,4 +79,16 @@ $("#kirimPertanyaan").click(function () {
     });
     // alert("ok");
   }
+});
+
+let hai = $(".nav-item-mobile").get(0).scrollWidth;
+// alert(hai);
+$(".nav-item-mobile").css(`transform`, `translateX(${hai}px)`);
+
+$(".burger-menu").click(function () {
+  $(".nav-item-mobile").css(`transform`, `translateX(0px)`);
+});
+
+$(".nav-item-mobile span").click(function () {
+  $(".nav-item-mobile").css(`transform`, `translateX(${hai}px)`);
 });
