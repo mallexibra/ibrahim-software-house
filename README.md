@@ -13,4 +13,10 @@
 
 ## Penjelasan Project IB-Software-House
 
-[Contribution guidelines for this project](docs/CONTRIBUTING.md)
+Pada project ini menampilkan Landing Page website dari Sebuah Software House bernama IB-Software-House.
+
+## Showcase
+
+[Link Website IB-Software-House](https://IB-Software-House.mallexibra.repl.co) **|** [Link Github IB-Software-House](https://github.com/mallexibra/ibrahim-software-house)
+
+![Showcase Website IB-Software-House](assets/img/IB-Software.png)
